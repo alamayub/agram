@@ -1,0 +1,102 @@
+.home-class {
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-image: url('../images/banner.png');
+  background-position: center;
+  background-size: cover;
+  transition: all .5s;
+}
+.home-class-inner {
+    height: 100%;
+    position: inherit;
+    padding: 0 125px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home-class h4 {
+    font-size: 60px;
+    margin: 0 0 10px 0;
+    color: white;
+    text-transform: uppercase;
+}
+.home-class button {
+    padding: 10px 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    transition: all .5s;
+    cursor: pointer;
+    background-color: lightseagreen;
+}
+.home-class button:hover { background-color: white; color: lightseagreen; font-size: 16px; }
+@media (max-width: 1250px) {
+    .home-class { height: 90vh; }
+    .home-class-inner { padding-left: 0 100px; }
+    .home-class h4 { font-size: 55px; }
+  }
+  @media (max-width: 1050px) {
+    .home-class { height: 80vh; }
+    .home-class-inner { padding: 0 80px; }
+    .home-class h4 { font-size: 50px; }
+  }
+
+  @media (max-width: 900px) {
+    .home-class { height: 70vh; }
+    .home-class-inner { padding: 0 60px; }
+    .home-class h4 { font-size: 45px; }
+  }
+@media (max-width: 750px) {
+    .home-class { height: 60vh; }
+    .home-class-inner { padding: 0 40px; }
+    .home-class h4 { font-size: 40px; }
+}
+
+/* Technolgies start */
+.home-technology {
+  max-width: 1150px;
+  padding: 50px 15px;
+  margin: auto;
+}
+.home-technology-header { 
+  font-weight: bold; 
+  font-size: 25px; 
+  margin-bottom: 15px;
+}
+
+.home-technology-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.home-tech-card-head { 
+  height: 150px;
+  width: 150px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .05);
+}
+.home-tech-card-head img {
+  height: 80px;
+  width: 80px;
+  background-color: transparent;
+}
+.home-tech-card-head:hover { 
+ border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+}
+/* Technologies ends here */

@@ -1,0 +1,21 @@
+/* This is services and our team page css */
+.our-team, .services-class {
+  max-width: 1150px;
+  margin: auto;
+  padding: 50px 15px; 
+  text-align: center;
+}
+.our-team-head, .services-class-head { margin-bottom: 20px; }
+.our-team-head h3, .services-class-head h3 {
+  font-size: 25px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.our-team-head p, .services-class-head p { font-size: 13px; }
+.our-team-data, .services-class-data {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.our-team-data { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.services-class-data { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }

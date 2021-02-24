@@ -1,0 +1,58 @@
+.our-team-card {
+  height: 300px;
+  background-color: rgba(128, 128, 128, .05);
+  transition: all .5s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+.our-team-card:hover { 
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, .5); 
+  border-radius: 10px;  
+}
+.avatar-class img {
+  height: 100px;
+  width: 100px;  
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, .25);
+}
+.our-team-card .info-class {
+  width: 100%;  
+  font-weight: 500;
+  font-size: 18px;  
+  text-align: center;
+}
+.info-class h2 { font-weight: 500; line-height: 1; font-size: 20px; }
+.our-team-card .position {
+  width: 100%;
+  font-size: 14px; 
+}
+.our-team-card .thoughts {
+  height: 70px;
+  width: 100%;
+  text-overflow: ellipsis;  
+  overflow: hidden;
+  font-size: 12px;  
+  margin-bottom: 8px;
+  text-align: center;
+}
+.social-links ul { display: flex; }
+.social-links ul a { text-decoration: none; }
+.social-links ul li { margin-right: 8px; }
+.social-links ul li i {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightseagreen;
+  /* background-color: rgba(0, 0, 0, .5); */
+  color: white;
+  transition: all .5s;
+  cursor: pointer;
+}
+.social-links ul li:hover i { border-radius: 15px; }

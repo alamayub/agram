@@ -187,3 +187,38 @@
 }
 
 /* Blog & Form ends */
+
+
+
+/* Service new starts */
+.services-new { padding: 0 15px 50px !important; }
+.service-new-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.service-new-service {
+  padding: 50px;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .25);
+}
+.service-new-service:first-child { border-bottom-right-radius: 0; }
+.service-new-service:nth-child(2) { border-bottom-left-radius: 0; }
+.service-new-service:nth-child(3) { border-top-right-radius: 0; }
+.service-new-service:last-child { border-top-left-radius: 0; }
+.service-new-service-inner { background-color: rgba(0, 0, 0, .25); }
+
+.service-new-service-title { font-size: 28px; line-height: 1; margin-bottom: 10px; font-weight: 500; }
+.service-new-service-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin-top: 30px;
+}
+@media (max-width: 650px) {
+  .service-new-content { grid-template-columns: repeat(1, 1fr); }
+}
+/* Service new ends */

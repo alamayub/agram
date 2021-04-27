@@ -18,6 +18,12 @@ class Home extends Component {
       { name: 'Office event with tomorrowland', img: 'https://media.wired.com/photos/5e618502dd088e00081102a9/2:1/w_2400,h_1200,c_limit/Biz-conference-187591171.jpg' },
       { name: 'Office event with tomorrowland', img: 'https://foxeventnepal.com/uploads/image/19-12-23-30982.png' },
     ]
+    const colors = [
+      { title: 'Development', sub: 'Transform Your Business Through Technoogy', img: 'https://www.eventige.com/hubfs/web-development-agency-1.png', color: 'teal' },
+      { title: 'Design', sub: 'Elevate Your User Experience', img: 'https://www.trade-schools.net/graphics/web-design-development-information-fb.png', color: 'yellow' },
+      { title: 'Cloud and DevOps', sub: 'Future-Proof and Scale Your Infrastructure', img: 'https://www.devopsgroup.com/wp-content/uploads/2019/03/services_cloudop_landscape_002.png', color: 'blue' },
+      { title: 'Support', sub: 'Keep Your Software Running At Its Best', img: 'https://opltechnologies.com/wp-content/uploads/2018/07/Call-Center.jpg', color: 'red' },
+    ]
     
     return (
       <div className="Home">
@@ -41,7 +47,22 @@ class Home extends Component {
             ))}
           </div>
         </div>
-
+        {/* services */}
+        <div className='services-new container'>
+          <div className='home-technology-head'>
+            <div className="home-technology-header">Our Services</div>
+            <NavLink to='/services' activeClassName='' className='view-all'>View All</NavLink>
+          </div>
+          <div className='service-new-content'>
+            { colors.map( ({title, sub, img, color}, i) => (
+              <div className='service-new-service' key={ i } style={{ backgroundColor: color }}>
+                <div className='service-new-service-title'>{ title }</div>
+                <div className='service-new-service-sub'>{ sub }</div>
+                <div className='service-new-service-img' style={{ backgroundImage: `url(${img})` }}></div>
+              </div>
+            )) }
+          </div>
+        </div>      
         <div className='form-blog container'>
           <div className='form'>
             <div className='home-form-head'>

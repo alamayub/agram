@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from 'react-router-dom'
 import '../css/navbar.css'
+import Logo from '../images/agram_logo.png'
 
 class Navbar extends Component {
   toggleMenu = () => {
@@ -13,13 +14,19 @@ class Navbar extends Component {
     } 
   }
 
+  closeMenu = () => {
+    if(window.innerWidth < 900) {
+      document.querySelector('.toggle').classList.remove('active')
+      document.querySelector('ul').style.display = 'none';
+    }
+  }
+
   componentDidMount() {
-    this.toggleMenu();
     window.addEventListener('resize', () => {
       console.log(window.innerWidth)
       var t = document.querySelector('.toggle')
       var ul = document.querySelector('.menu ul')
-      if(window.innerWidth < 760) {
+      if(window.innerWidth <= 900) {
         t.classList.remove('active')
         t.style.display = 'block'
         ul.style.display = 'none'
@@ -33,16 +40,21 @@ class Navbar extends Component {
   render() {
     return (
       <header>
-        <div className="logo"><NavLink exact to='/'>Agram</NavLink></div>
+        <div className="logo">
+          <NavLink to='/'>
+            <img src={Logo} alt='Agram Infotech' />
+          </NavLink>
+        </div>
         <div className="menu">
           <div className="toggle" onClick={this.toggleMenu}></div>
           <ul>
-            <li><NavLink exact to='/' activeClassName="activeNavbarClass">Home</NavLink></li>
-            <li><NavLink to='/services' activeClassName="activeNavbarClass">Services</NavLink></li>
-            <li><NavLink to='/ourteam' activeClassName="activeNavbarClass">OurTeam</NavLink></li>
-            <li><NavLink to='/contact' activeClassName="activeNavbarClass">Contact</NavLink></li>
-            <li><NavLink to='/about' activeClassName="activeNavbarClass">About</NavLink></li>
-            <li><NavLink to='/careers' activeClassName="activeNavbarClass">Careers</NavLink></li>
+            <li><NavLink exact to='/' activeClassName="activeNavbarClass" onClick={this.closeMenu}>Home</NavLink></li>
+            <li><NavLink to='/company/about-us' activeClassName="activeNavbarClass" onClick={this.closeMenu}>Company</NavLink></li>
+            <li><NavLink to='/services' activeClassName="activeNavbarClass" onClick={this.closeMenu}>Services</NavLink></li>
+            <li><NavLink to='/solutions' activeClassName="activeNavbarClass" onClick={this.closeMenu}>Solutions</NavLink></li>
+            <li><NavLink to='/ourteam' activeClassName="activeNavbarClass" onClick={this.closeMenu}>Our Team</NavLink></li>
+            <li><NavLink to='/blog' activeClassName="activeNavbarClass" onClick={this.closeMenu}>Blog</NavLink></li>
+            <li><NavLink to='/contact' activeClassName="activeNavbarClass" onClick={this.closeMenu}>Contact Us</NavLink></li>
           </ul>
         </div>
       </header> 

@@ -26,7 +26,7 @@ function Services() {
       <div className="services-class">
         <div className="services-class-head">
           <h3>Our Services</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>  
+          <p>We provide full-stack, creative & business oriented software solutions that drive your revenue and scale up enterprises.</p>  
         </div>
         <div className="services-class-data">
           { services.map( s => <ServiceCard service={s} key={services.indexOf(s)} />) }

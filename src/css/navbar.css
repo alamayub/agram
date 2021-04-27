@@ -13,67 +13,69 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightseagreen;
+  background-color: white;
   transition: all .5s;
 }
-header a { color: white; text-decoration: none; }
-header .logo {
-  text-transform: uppercase;
-  font-size: 40px;
-  transition: all .5s;
-}
-header .menu {
+header a { color: #0a0a0a; text-decoration: none; }
+header .logo a {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+}
+header .logo img {
+  height: 7vh;
+  width: auto;
 }
 header ul { list-style: none; transition: all .5s; }
-header ul li { float: left; }
+header ul li { display: inline-block; }
 header ul li a {
-  padding: 10px 20px; 
+  padding: 7px 15px; 
   transition: all .5s;
+  display: inline-block;
 }
-header ul li a:hover { background-color: rgba(0, 0, 0, .5); border-radius: 25px; }
-.activeNavbarClass { background-color: rgba(0, 0, 0, .5); border-radius: 25px; }
+header ul li a:hover, .activeNavbarClass { 
+  background-color: #0a0a0a; 
+  color: white;
+  border-radius: 25px; 
+}
+.toggle, .active {
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  cursor: pointer;
+  background-color: #0a0a0a;
+  color: white;
+}
 .toggle {
   display: none;
   width: 40px;
   height: 40px;
-  background: url('../images/navbar/menu.png');
-  background-repeat: no-repeat;
-  background-size: 20px;
-  background-position: center;
-  cursor: pointer;
+  background-image: url('../images/navbar/menu.png');
+  
 }
-.active {
-  background: url('../images/navbar/close.png');
-  background-repeat: no-repeat;
-  background-size: 20px;
-  background-position: center;
-  cursor: pointer;
-}
+.active { background-image: url('../images/navbar/close.png'); }
 @media (max-width: 1250px) {
   header { padding: 0 45px; }
-  header .logo { font-size: 35px; }
 }
 @media (max-width: 1050px) {
   header { padding: 0 35px; }
-  header .logo { font-size: 32px; }
 }
 @media (max-width: 900px) {
   header { padding: 0 25px; }
-  header .logo { font-size: 28px; }
 }
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   header{ padding: 10 15px; }
-  header .logo { font-size: 25px; }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 15px;
-    text-align: end;
+ 
+  header .menu ul { 
+    display: none; 
+    position: absolute; 
+    top: 60px; 
+    right: 0; 
+    background-color: white;
+    width: 155px;
+    padding-left: 15px;
   }
-  header .menu ul { display: none; position: absolute; top: 50px; right: 0; background-color: lightseagreen; width: 150px; }
-  header .menu ul li { float: none; padding: 10px 20px; }
+  header .menu ul li a{ margin-bottom: 5px; }
   .toggle { display: block; }
 }

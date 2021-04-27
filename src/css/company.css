@@ -1,0 +1,21 @@
+.company {
+  max-width: 1150px;
+  padding: 20px 15px 0 15px;
+  margin: auto;  
+}
+.company-tab-class { width: 100%; }
+.company-tab-class ul li { 
+  display: inline-block;  
+  transition: all .5s; 
+}
+.company-tab-class a { 
+  display: block;
+  color: #0a0a0a;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+.companyNavbarClass { 
+  background-color: #0a0a0a; 
+  color: white !important; 
+  border-radius: 25px; 
+}

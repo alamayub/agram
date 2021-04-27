@@ -1,46 +1,43 @@
-import IOS from '../images/techs/ios.webp'
+// import IOS from '../images/techs/ios.webp'
 import Android from '../images/techs/android.webp'
-import Flutter from '../images/techs/flutter.webp'
-import Ionic from '../images/techs/ionic.png'
-import Swift from '../images/techs/swift.webp'
-import Angular from '../images/techs/angular.png'
+// import Flutter from '../images/techs/flutter.webp'
+// import Ionic from '../images/techs/ionic.png'
+// import Swift from '../images/techs/swift.webp'
+// import Angular from '../images/techs/angular.png'
 import ReactJs from '../images/techs/react.png'
-import Vue from '../images/techs/vue.png'
-import HTML5 from '../images/techs/html5.png'
-import Bootstrap from '../images/techs/bootstrap.png'
-import Mongo from '../images/techs/mongo.png'
-import MySQL from '../images/techs/mysql.png'
-import Firebase from '../images/techs/firebase.png'
-import Oracle from '../images/techs/oracle.webp'
-import php from '../images/techs/php.webp'
-import NET from '../images/techs/aspnet.png'
-import Java from '../images/techs/java.webp'
-import Node from '../images/techs/node.webp'
-import Python from '../images/techs/python.webp'
+// import Vue from '../images/techs/vue.png'
+// import HTML5 from '../images/techs/html5.png'
+// import Bootstrap from '../images/techs/bootstrap.png'
+// import Mongo from '../images/techs/mongo.png'
+// import MySQL from '../images/techs/mysql.png'
+// import Firebase from '../images/techs/firebase.png'
+// import Oracle from '../images/techs/oracle.webp'
+// import php from '../images/techs/php.webp'
+// import NET from '../images/techs/aspnet.png'
+// import Java from '../images/techs/java.webp'
+// import Node from '../images/techs/node.webp'
+// import Python from '../images/techs/python.webp'
 import Drupal from '../images/techs/drupal.webp'
-import Magento from '../images/techs/magento.webp'
-import Wordpress from '../images/techs/wordpress.webp'
+// import Magento from '../images/techs/magento.webp'
+// import Wordpress from '../images/techs/wordpress.webp'
 import Shopify from '../images/techs/shopify.webp'
-import Joolma from '../images/techs/joolma.png'
+// import Joolma from '../images/techs/joolma.png'
 import '../css/home.css'
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom'
 class Home extends Component {
-
-  state = { current: 0 }
-  showList = (i) => {
-    this.setState({ current: i })
-    console.log(this.state.current)
-  }
   render() {
-    const techs = [
-      { name: 'iOS', image: IOS }, { name: 'Android', image: Android }, { name: 'Flutter', image: Flutter },
-      { name: 'Ionic', image: Ionic }, { name: 'Swift', image: Swift }, { name: 'Angular.js', image: Angular },
-      { name: 'React.js', image: ReactJs }, { name: 'Vue.js', image: Vue }, { name: 'HTML5', image: HTML5 }, 
-      { name: 'Bootstrap', image: Bootstrap }, { name: 'Mongo DB', image: Mongo }, {name: 'MySQL', image: MySQL },
-      { name: 'Firebase', image: Firebase }, { name: 'Oracle', image: Oracle }, { name: 'PHP', image: php },
-      { name: '.net', image: NET }, { name: 'Java', image: Java }, { name: 'Node.js', image: Node }, 
-      { name: 'Python', image: Python }, { name: 'Drupal', image: Drupal }, { name: 'Magento', image: Magento },
-      { name: 'Wordpress', image: Wordpress }, { name: 'Shopify', image: Shopify }, { name: 'Joolma', image: Joolma }
+    const services = [
+      { name: 'App Development(Mobile & Web App)', img: Android },
+      { name: 'Web Development', img: ReactJs },
+      { name: 'Digital Marketing Services', img: Drupal },
+      { name: 'Ecommerce Services', img: Shopify },
+      // { name: 'IoT App Development', img: Vue }
+    ]
+    const blogs = [
+      { name: 'Office event with tomorrowland', img: 'https://weraveyou.com/wp-content/uploads/2020/04/Tomorrowland-2019-footage.jpg' },
+      { name: 'Office event with tomorrowland', img: 'https://media.wired.com/photos/5e618502dd088e00081102a9/2:1/w_2400,h_1200,c_limit/Biz-conference-187591171.jpg' },
+      { name: 'Office event with tomorrowland', img: 'https://foxeventnepal.com/uploads/image/19-12-23-30982.png' },
     ]
     
     return (
@@ -51,17 +48,63 @@ class Home extends Component {
             <div><button>explore</button></div>
           </div>
         </div>
-        <div className="home-technology">
-          <div className="home-technology-header">Technologies We Work With</div>
+        <div className="home-technology container">
+          <div className='home-technology-head'>
+            <div className="home-technology-header">Our Services</div>
+            <NavLink to='/blog' activeClassName='' className='view-all'>View All</NavLink>
+          </div>
           <div className="home-technology-content">
-            {techs.map( (tech, t) => (
-              <div className="home-tech-card" key={t}>
-                <div className="home-tech-card-head" onClick={() => this.showList(t)}>
-                  <img src={ tech.image } alt={tech.name} />
-                  {tech.name}
-                </div>
+            {services.map( (service, s) => (
+              <div className="home-service-card" key={s}>
+                <img src={ service.img } alt={ service.name } />
+                <div>{ service.name }</div>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className='form-blog container'>
+          <div className='form'>
+            <div className='home-form-head'>
+              <h3>Let's make somthing together</h3>
+              <p>Feel free to contact us whenever you want. Just tell us you query we will revert back with a solution shortly.</p>
+            </div>
+            <form>
+              <div>
+                <input type='text' placeholder='Full Name' required />
+                <input type='email' placeholder='Email' required />
+              </div>
+              <div>
+                <input type='number' placeholder='Mobile Number' required />
+                <select required>
+                  <option value="volvo">Web development</option>
+                  <option value="saab">Mobile App</option>
+                  <option value="opel">IoT</option>
+                  <option value="audi">SEO</option>
+                </select>
+              </div>
+              <textarea placeholder='Your message...' rows='6' required />
+              <input type='submit' value='Submit' />
+            </form>
+          </div>
+          <div className='home-blog'>
+            <div className='home-blog-head'>
+              <h3>Explore our latest blog</h3>
+              <NavLink to='/blog' activeClassName='' className='view-all'>View All</NavLink>
+            </div>
+            <div className='home-blog-content'>
+              { blogs.map( (b, i) => (
+                <div className='home-blog-item' key={ i }>
+                  <div className='home-blog-item-img'>
+                    <img src={ b.img } alt={ b.name } />
+                  </div>
+                  <div className='home-blog-item-content'>
+                    <h6>{ b.name }</h6>
+                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                  </div>
+                </div>
+              )) }
+            </div>
           </div>
         </div>
       </div>
@@ -69,23 +112,3 @@ class Home extends Component {
   }
 }
 export default Home;
-
-// const techs = [
-//   { name: 'Mobile', lists: ['iOS', 'Android', 'React Native', 'Flutter', 'Ionic', 'Swift'] },
-//   { name: 'Front End', lists: ['Angular.js', 'React.js', 'Vue.js', 'HTML5', 'Bootstrap'] },
-//   { name: 'Database', lists: ['Mongo DB', 'MySQL', 'Firebase', 'Oracle'] },
-//   { name: 'Backend', lists: ['PHP', '.net', 'Java', 'Node.js', 'Python'] },
-//   { name: 'CMS', lists: ['Drupal', 'Magento', 'Wordpress', 'Shopify', 'Joolma'] },
-// ]
-// {techs.map( (tech, t) => {
-//   if (t == 2) {
-//     return <div className="home-tech-card" key={t}>
-//       <div className="home-tech-card-head" onClick={() => this.showList(t)}>
-//         <img src={ tech.image } />
-//         {tech.name}
-//       </div>
-//     </div>
-//   } else {
-//     return <div>else</div>
-//   }
-// })}

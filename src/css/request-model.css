@@ -1,0 +1,137 @@
+.requet-btn {
+  position: fixed;
+  top: 50%;
+  background-image: linear-gradient(to top, #4d86b5, #53a432);  
+  background-color: #0a0a0a;
+  color: white;
+  padding: 7px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transform: rotate(-90deg);
+  right: -60px;
+}
+.request-model {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+  transition: ease-in-out 1000ms;
+}
+.request-model-content {
+  position: relative;
+  width: 60%;
+  background-color: #ffffff;
+  min-height: 80vh; 
+  margin: auto; 
+  margin-top: 10vh;
+  background-image: url('https://www.wallpapertip.com/wmimgs/196-1963020_website-backgrounds-website-login-page-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  box-shadow: 0 8px 15px 0 rgba(0,0,0, .25);
+  overflow: hidden;
+  position: relative;
+}
+.section-form, .section-info { 
+  width: 50%; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.section-form .form-title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: start;  
+}
+.section-form { justify-content: center; background-color: white; }
+.section-form form {
+  display: flex;
+  flex-direction: column;  
+}
+.section-form form * {
+  outline: none;
+  border: 2px solid transparent;
+  background-color: rgba(0,0,0, .05);
+  padding: 10px 15px;  
+  margin-bottom: 15px;
+}
+.section-form form *:focus { border: 2px solid #0a0a0a; }
+.section-form form input[type='submit'] {
+  font-weight: 500;
+  max-width: 150px;
+  margin-bottom: 0;
+}
+.section-form form input[type='submit']:hover {
+  background-color: white;
+  color: #0a0a0a;
+  border: 2px solid #0a0a0a;  
+}
+.section-info { justify-content: center; background-color: rgba(0,0,0, .1); }
+.request-model-content .close-btn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 0;
+  top: 0;
+  transition: ease-in-out 250ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+.request-model-content .close-btn:hover { 
+  background-color: #0a0a0a;
+  color: white;
+}
+.section-info .section-info-header {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;  
+  margin-bottom: 20px;
+}
+.section-info-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+.section-info-social .social-header {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: 500;
+}
+.section-social { text-align: center; }
+.section-social a {
+  display: inline-block;
+  line-height: 36px;
+  width: 36px;
+  border: 1px solid transparent;
+  margin-right: 10px;
+  color: white;
+  transition: ease-in-out 500ms;
+}
+.section-social a:hover {
+  border-radius: 50%;
+  background-color: #0a0a0a;
+}
+.section-social a:last-child { margin-right: 0px; }
+@media (max-width: 750px) {
+  .request-model-content { width: 90%; }  
+}
+@media (max-width: 850px) {
+  .request-model-content { width: 75%; }  
+  .section-info { display: none; }
+  .section-form { width: 100%; }  
+}

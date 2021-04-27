@@ -12,11 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
 ::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari and Opera */
   -ms-overflow-style: none;  /* IE and Edge */
@@ -27,3 +23,66 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.container {
+  max-width: 1150px;
+  padding: 50px 15px;
+  margin: auto;
+}
+
+/* Button Ripple Effect */
+@keyframes tween-color {
+  0% {
+    box-shadow: 0 0 0 0 rgb(51 152 204 / 50%);
+  }
+  50% {
+        box-shadow: 0 0 0 20px rgb(51 152 204 / 0%);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(51 152 204 / 0%);
+  }
+}
+
+/* Iframe Maps */
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+/* View All Btn */
+a.view-all {
+  background-color: #0a0a0a;
+  border: 1px solid transparent;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: ease-in-out 250ms;
+}
+a.view-all:hover { box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5); }
+
+/* Form & Input decoration */
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  column-gap: 15px;
+}
+form input, form textarea, form select { 
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .1);
+  padding: 10px 15px;
+  transition: ease-in-out 300ms;
+}
+form input:focus, form textarea:focus, form select:focus { border: 1px solid #0a0a0a; }
+form input[type='submit'] {
+  background-color: #0a0a0a;
+  max-width: 150px;
+  color: white;
+  transition: ease-in-out 250ms;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+input[type='submit']:hover { box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5); }

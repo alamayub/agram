@@ -1,7 +1,7 @@
 .career-class {
   max-width: 1150px;
   margin: auto;
-  padding: 40px 15px;  
+  padding: 20px 15px;  
 }
 .career-class h3 { font-size: 22px; font-weight: 600; line-height: 1; margin-bottom: 5px; }
 .career-class p { font-size: 13px; }
@@ -48,7 +48,7 @@
 .career-class-job-header { margin-top: 40px; }
 .career-class-job-section-card {
   flex: 1 300px;
-  padding: 25px 15px;
+  padding: 20px;
   transition: all .5s;
   background-color: rgba(128, 128, 128, .05);
   display: flex;

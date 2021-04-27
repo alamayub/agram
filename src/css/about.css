@@ -1,10 +1,9 @@
 .about-class {
     width: 100%;
-    background-color: #E0E0E0;
-    padding: 50px 0;
+    padding: 20px 0;
 }
-.about-class-inner {
-    max-width: 1150px;
+.about-class-inner, .about-class-why {
+    max-width: 1120px;
     margin: auto;
     display: flex;
 }
@@ -12,7 +11,7 @@
 .about-class-inner-img {
     background-image: url('../images/about.jpg');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 50vh;
 }
@@ -25,34 +24,55 @@
 .about-heading { 
     font-size: 45px; 
     font-weight: 700; 
-    color: white; 
     margin-bottom: 15px;
     line-height: 1; 
 }
 .about-class-inner-text p { font-size: 16px; }
+
+/* Why block */
+.about-class-why { 
+  margin-top: 20px;
+  display: block !important; 
+}
+.about-class-why h3 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 15px; 
+}
+.about-class-why span { margin-top: 20px; }
+.about-class-why ul {
+  padding-left: 20px;
+  margin-top: 15px;  
+}
+.about-class-why ul i { margin-right: 10px; }
+
 @media (max-width: 1250px) {
-    .about-class { padding: 80px 25px; }
-    .about-class-inner-img { height: 50vh; }
-  }
-  @media (max-width: 1050px) {
-    .about-class-inner-img { height: 40vh; }
-    .about-class { padding: 65px 20px; }
-  }
-  @media (max-width: 900px) {
-    .about-class { padding: 52px 20px; }
-    .about-class-inner-img { height: 30vh; }
-  }
+  .about-class { padding: 80px 25px; }
+  .about-class-inner-img { height: 50vh; }
+}
+@media (max-width: 1050px) {
+  .about-class-inner-img { height: 40vh; }
+  .about-class { padding: 65px 20px; }
+  .about-heading, .about-class-why h3 { font-size: 35px; }
+}
+@media (max-width: 900px) {
+  .about-class { padding: 52px 20px; }
+  .about-class-inner-img { height: 30vh; }
+  .about-heading, .about-class-why h3 { font-size: 30px; }
+}
 @media (max-width: 750px) {
-    .about-class-inner { flex-direction: column; }
-    .about-class-inner-text { margin-top: 25px; margin-left: 0; }
-    .about-class { padding: 40px 15px; }
-    .about-class-inner-img { height: 30vh; }
+  .about-class-inner { flex-direction: column; }
+  .about-class-inner-text { margin-top: 25px; margin-left: 0; }
+  .about-class { padding: 40px 15px; }
+  .about-class-inner-img { height: 30vh; }
+  .about-heading, .about-class-why h3 { font-size: 27px; }
 }
 @media (max-width: 500px) {
-    .about-class-inner-img {
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        min-height: auto;
-    }
+  .about-class-inner-img {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: auto;
+  }
+  .about-heading, .about-class-why h3 { font-size: 25px; }
 }

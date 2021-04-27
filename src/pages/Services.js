@@ -23,7 +23,7 @@ function Services() {
   ]
   return (
     <div className="Services">
-      <div className="services-class">
+      <div className="services-class container">
         <div className="services-class-head">
           <h3>Our Services</h3>
           <p>We provide full-stack, creative & business oriented software solutions that drive your revenue and scale up enterprises.</p>  

@@ -1,7 +1,7 @@
 import '../css/contact-us.css'
 function Contact() {
   return (
-    <div className="Contact-us">
+    <div className="Contact-us container">
       <div className="contact-us-class">
         <div className="contact-us-class-content">
           <div className="contact-us-class-content-header">get in touch</div>

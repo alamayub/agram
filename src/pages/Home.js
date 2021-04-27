@@ -1,27 +1,7 @@
-// import IOS from '../images/techs/ios.webp'
 import Android from '../images/techs/android.webp'
-// import Flutter from '../images/techs/flutter.webp'
-// import Ionic from '../images/techs/ionic.png'
-// import Swift from '../images/techs/swift.webp'
-// import Angular from '../images/techs/angular.png'
 import ReactJs from '../images/techs/react.png'
-// import Vue from '../images/techs/vue.png'
-// import HTML5 from '../images/techs/html5.png'
-// import Bootstrap from '../images/techs/bootstrap.png'
-// import Mongo from '../images/techs/mongo.png'
-// import MySQL from '../images/techs/mysql.png'
-// import Firebase from '../images/techs/firebase.png'
-// import Oracle from '../images/techs/oracle.webp'
-// import php from '../images/techs/php.webp'
-// import NET from '../images/techs/aspnet.png'
-// import Java from '../images/techs/java.webp'
-// import Node from '../images/techs/node.webp'
-// import Python from '../images/techs/python.webp'
 import Drupal from '../images/techs/drupal.webp'
-// import Magento from '../images/techs/magento.webp'
-// import Wordpress from '../images/techs/wordpress.webp'
 import Shopify from '../images/techs/shopify.webp'
-// import Joolma from '../images/techs/joolma.png'
 import '../css/home.css'
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
@@ -32,7 +12,6 @@ class Home extends Component {
       { name: 'Web Development', img: ReactJs },
       { name: 'Digital Marketing Services', img: Drupal },
       { name: 'Ecommerce Services', img: Shopify },
-      // { name: 'IoT App Development', img: Vue }
     ]
     const blogs = [
       { name: 'Office event with tomorrowland', img: 'https://weraveyou.com/wp-content/uploads/2020/04/Tomorrowland-2019-footage.jpg' },
@@ -51,7 +30,7 @@ class Home extends Component {
         <div className="home-technology container">
           <div className='home-technology-head'>
             <div className="home-technology-header">Our Services</div>
-            <NavLink to='/blog' activeClassName='' className='view-all'>View All</NavLink>
+            <NavLink to='/services' activeClassName='' className='view-all'>View All</NavLink>
           </div>
           <div className="home-technology-content">
             {services.map( (service, s) => (
@@ -67,7 +46,7 @@ class Home extends Component {
           <div className='form'>
             <div className='home-form-head'>
               <h3>Let's make somthing together</h3>
-              <p>Feel free to contact us whenever you want. Just tell us you query we will revert back with a solution shortly.</p>
+              <p>Feel free to contact us whenever you want. Just tell us your query we will revert back with a solution shortly.</p>
             </div>
             <form>
               <div>
@@ -83,7 +62,7 @@ class Home extends Component {
                   <option value="audi">SEO</option>
                 </select>
               </div>
-              <textarea placeholder='Your message...' rows='6' required />
+              <textarea placeholder='Your message...' rows='4' required />
               <input type='submit' value='Submit' />
             </form>
           </div>

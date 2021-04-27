@@ -27,7 +27,7 @@ header .logo img {
   height: 7vh;
   width: auto;
 }
-header ul { list-style: none; transition: all .5s; }
+header ul { list-style: none; transition: all .5s; grid-gap: 10px; }
 header ul li { display: inline-block; }
 header ul li a {
   padding: 7px 15px; 

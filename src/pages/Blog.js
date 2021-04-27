@@ -9,7 +9,7 @@ function Blog() {
     { name: 'Office event with tomorrow land', img: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg' }
   ]
   return (
-    <div className='blog'>
+    <div className='blog container'>
       <div className='blog-items'>
         { blogs.map( (b, i) => (
           <div className='blog-item' key={ blogs.indexOf(b) }>

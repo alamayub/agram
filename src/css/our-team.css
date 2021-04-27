@@ -1,10 +1,5 @@
 /* This is services and our team page css */
-.our-team, .services-class {
-  max-width: 1150px;
-  margin: auto;
-  padding: 50px 15px; 
-  text-align: center;
-}
+.our-team, .services-class { text-align: center; }
 .our-team-head, .services-class-head { margin-bottom: 20px; }
 .our-team-head h3, .services-class-head h3 {
   font-size: 25px;

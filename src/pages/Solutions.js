@@ -25,7 +25,7 @@ function Solutions() {
   ]
 
   return (
-    <div className='solutions'>
+    <div className='solutions container'>
       { solutions.map( (m, i) => (
           <div className='solution-item' key={ i }>
             <div className='solution-item-head'>{ m.title }</div>

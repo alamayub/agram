@@ -32,15 +32,9 @@ input::-webkit-inner-spin-button {
 
 /* Button Ripple Effect */
 @keyframes tween-color {
-  0% {
-    box-shadow: 0 0 0 0 rgb(51 152 204 / 50%);
-  }
-  50% {
-        box-shadow: 0 0 0 20px rgb(51 152 204 / 0%);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgb(51 152 204 / 0%);
-  }
+  0% { box-shadow: 0 0 0 0 rgb(51 152 204 / 50%); }
+  50% { box-shadow: 0 0 0 20px rgb(51 152 204 / 0%); }
+  100% { box-shadow: 0 0 0 0 rgb(51 152 204 / 0%); }
 }
 
 /* Iframe Maps */
@@ -67,8 +61,7 @@ a.view-all:hover { box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5); }
 form {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
-  column-gap: 15px;
+  grid-gap: 15px;
 }
 form input, form textarea, form select { 
   outline: none;

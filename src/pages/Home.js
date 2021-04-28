@@ -19,10 +19,10 @@ class Home extends Component {
       { name: 'Office event with tomorrowland', img: 'https://foxeventnepal.com/uploads/image/19-12-23-30982.png' },
     ]
     const colors = [
-      { title: 'Development', sub: 'Transform Your Business Through Technoogy', img: 'https://www.eventige.com/hubfs/web-development-agency-1.png', color: 'teal' },
-      { title: 'Design', sub: 'Elevate Your User Experience', img: 'https://www.trade-schools.net/graphics/web-design-development-information-fb.png', color: 'yellow' },
-      { title: 'Cloud and DevOps', sub: 'Future-Proof and Scale Your Infrastructure', img: 'https://www.devopsgroup.com/wp-content/uploads/2019/03/services_cloudop_landscape_002.png', color: 'blue' },
-      { title: 'Support', sub: 'Keep Your Software Running At Its Best', img: 'https://opltechnologies.com/wp-content/uploads/2018/07/Call-Center.jpg', color: 'red' },
+      { title: 'Development', sub: 'Transform Your Business Through Technoogy', img: 'https://www.eventige.com/hubfs/web-development-agency-1.png', color: '#20B2AA' },
+      { title: 'Design', sub: 'Elevate Your User Experience', img: 'https://www.trade-schools.net/graphics/web-design-development-information-fb.png', color: '#FFBF00' },
+      { title: 'Cloud and DevOps', sub: 'Future-Proof and Scale Your Infrastructure', img: 'https://www.devopsgroup.com/wp-content/uploads/2019/03/services_cloudop_landscape_002.png', color: '#00BFFF' },
+      { title: 'Support', sub: 'Keep Your Software Running At Its Best', img: 'https://opltechnologies.com/wp-content/uploads/2018/07/Call-Center.jpg', color: '#C71585' },
     ]
     
     return (

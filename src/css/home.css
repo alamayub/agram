@@ -219,6 +219,14 @@
   margin-top: 30px;
 }
 @media (max-width: 650px) {
-  .service-new-content { grid-template-columns: repeat(1, 1fr); }
+  .service-new-service { padding: 30px; }
+  .service-new-content { 
+    grid-gap: 15px;
+    grid-template-columns: repeat(1, 1fr); 
+  }
+  .service-new-service { border-radius: 15px !important; }
+  .service-new-service-title { font-size: 20px; margin-bottom: 7px; }
+  .service-new-service-sub { font-size: 14px; }
+  .service-new-service-img { margin-top: 15px; }
 }
 /* Service new ends */
